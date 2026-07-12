@@ -8,12 +8,18 @@
 
 /* Begin PBXFileReference section */
 		2C95697A2FFFFAC3008BF247 /* LemonRestaurantCh11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonRestaurantCh11.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9569943002CEDC008BF247 /* Conditionals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Conditionals.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2C95697C2FFFFAC3008BF247 /* LemonRestaurantCh11 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LemonRestaurantCh11;
+			sourceTree = "<group>";
+		};
+		2C95698B3002B9B7008BF247 /* Practice */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Practice;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +38,8 @@
 		2C9569712FFFFAC3008BF247 = {
 			isa = PBXGroup;
 			children = (
+				2C9569943002CEDC008BF247 /* Conditionals.playground */,
+				2C95698B3002B9B7008BF247 /* Practice */,
 				2C95697C2FFFFAC3008BF247 /* LemonRestaurantCh11 */,
 				2C95697B2FFFFAC3008BF247 /* Products */,
 			);
@@ -62,6 +70,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				2C95697C2FFFFAC3008BF247 /* LemonRestaurantCh11 */,
+				2C95698B3002B9B7008BF247 /* Practice */,
 			);
 			name = LemonRestaurantCh11;
 			packageProductDependencies = (
