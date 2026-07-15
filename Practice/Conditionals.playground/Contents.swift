@@ -49,7 +49,7 @@ if isOpen && hasOutdoorSeating {
 //|--- Example 4 ---|
 let userName = "Ken"
 
-if userName = "Ken"{
+if userName == "Ken"{
     print("Welcome, Ken!")
 }else{
     print("Unknown user")
@@ -69,7 +69,7 @@ if groupSize > 8 && children > 0 {
     print("large group - call manager")
     print("Offer kids menu")
 }
-}
+
 
 
 
@@ -78,9 +78,8 @@ let regularGuest = true
 
 if vipUser {
     print("Welcome, VIP Guest")
-}else if
-    print("")
 }else{
-    print("")
+    print("Welcome mortal user")
+}
 
 
