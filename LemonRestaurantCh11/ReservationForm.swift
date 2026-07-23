@@ -80,7 +80,7 @@ struct ReservationForm: View {
                         
                         VStack(alignment: .leading){
                             
-                            Text("Little Lemon")
+                            Text("Lemonrista")
                                 .font(.title2)
                                 .bold()
                             
@@ -170,7 +170,7 @@ struct ReservationForm: View {
                         """
                     }.disabled(userName.isEmpty ||
                                userPhone.isEmpty)
-                    
+                
                 }
                 
                 

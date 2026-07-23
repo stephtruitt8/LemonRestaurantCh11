@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct DataListView: View {
+    var students = ["Christian", "Brittany", "Steph", "Leo"]
+    
+    var movies = ["Napolean Dynamite", "Rush Hour", "Scott Pilgrim", "Sucker Punch", "Backrooms"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section(header: Text("Students")) {
+                ForEach(students, id: \.self) { student in
+                    Text(student)
+                }
+            }
+            Section(header: Text("Movies")) {
+                ForEach(movies, id: \.self) { movie in
+                    Text(movie)
+                }
+            }
+            
+        }
+        
     }
 }
 
