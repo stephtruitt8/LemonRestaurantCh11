@@ -12,7 +12,7 @@
 print("--- Arrays ---")
 
 print("\n-- Basic Array (String) --")
-var dishes = ["Pasta", "Pizza", "Risotto"]
+var dishes: [String] = ["Pasta", "Pizza", "Risotto"]
 
 print(dishes)
 print(dishes[2])
@@ -41,7 +41,7 @@ print(dishes)
 */
 
 print("\n--- Price Arrays (Double) ---")
-var prices = [9.99, 10.58, 6.00]
+var prices:[Double] = [9.99, 10.58, 6.00]
 print(prices[2])
 
 let total = prices[0] + prices[1]
@@ -49,6 +49,6 @@ print("Total for two dishes \(total)")
 
 /* Mini 1 */
 
-var desserts = ["Ice cream", "Brownie", "Cake"]
+var desserts:[String] = ["Ice cream", "Brownie", "Cake"]
 print(desserts)
 print(desserts.count)
