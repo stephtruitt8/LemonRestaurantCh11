@@ -136,4 +136,21 @@ print("-- All Ingredients --")
 }
 
 
+// Dictionaries VS Structs
+let dishDict:[String:Any] = [
+    "name": "Pizza",
+    "price": "11.99",
+    "image": true
+]
+
+// Struct
+
+struct Drink {
+    var name: String
+    var price: Double
+    var image: String
+}
+
+let coffee = Drink(name: "Coffee", price: 9.99, image: "coffee.png")
+let wine = Drink(name: "Wine", price: 25.99, image: "wine.png")
 
