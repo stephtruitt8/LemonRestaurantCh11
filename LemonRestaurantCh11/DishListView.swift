@@ -9,6 +9,14 @@ import SwiftUI
 
 struct DishListView: View {
     @State private var selectedCategory:String = "All"
+    @State private var showAddDishView:Bool = false
+    @State private var newDish = Dish(
+        name: "",
+        category: "",
+        price: 0.0,
+        description: "",
+        imageName: ""
+    )
     
     @State private var dishes:[Dish] = [
         Dish(
@@ -127,31 +135,35 @@ struct DishListView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]){
                         ForEach(filteredDishes, id:\.name) { dish in
-                            VStack {
-                                Image(dish.imageName)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame( height: 100)
-                                    .clipped()
-                                
-                                
+                            NavigationLink(destination: DishDetailView(dish: dish)) {
                                 VStack {
-                                    Text(dish.name)
-                                        .font(.system(size:15))
-                                        .bold()
+                                    Image(dish.imageName)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame( height: 100)
+                                        .clipped()
                                     
-                                    Text(dish.description)
-                                        .lineLimit(2)
                                     
-                                    Text("\(dish.price, specifier: "%.2f")")
-                                        .bold()
+                                    VStack {
+                                        Text(dish.name)
+                                            .font(.system(size:15))
+                                            .bold()
+                                            .foregroundStyle(Color.black)
+                                        
+                                        Text(dish.description)
+                                            .lineLimit(2)
+                                            .foregroundStyle(Color.black)
+                                        
+                                        Text("\(dish.price, specifier: "%.2f")")
+                                            .bold()
+                                            .foregroundStyle(Color.black)
+                                    }
                                 }
+                                .padding(10)
+                                .background(Color.black.opacity(0.07))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .shadow(color: Color.black.opacity(0.2), radius: 10)
                             }
-                            .padding(10)
-                            .background(Color.black.opacity(0.07))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: Color.black.opacity(0.2), radius: 10)
-                            
                         }
                         
 //                        Text("Hello Cohort 11")
@@ -159,6 +171,24 @@ struct DishListView: View {
                     }
                 }
             }
+        }
+        
+        HStack {
+            Button(){
+                // Logic here
+                showAddDishView = true
+            } label: {
+                HStack {
+                    Image(systemName: "plus.circle.fill")
+                    Text("Add Dish")
+                        .fontWeight(.bold)
+                }
+            }
+            .buttonStyle(.bordered)
+            .tint(Color.green)
+        }
+        .sheet(isPresented: $showAddDishView) {
+            AddDishView(dish: $newDish, dishes: $dishes)
         }
     }
 }
